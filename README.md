@@ -1,7 +1,7 @@
 # CPoker Clusters
 
 CPoker is an extension of the Two Plus Two hand evaluator that lends itself to clustering poker hands after the flop and after the turn.
-In order to use the file one must have already generated the handranks.dat file from the two plus two evaulator from the XPokerEval git repository.
+In order to use the file one must have already generated the handranks.dat file from the two plus two evaulator from the XPokerEval git repository (arrays.h and lines 1-842 in Poker.h are not mine they come from the git repository mentioned).
 
 Once that is done the function within poker.h called iterate_one_private_hand will output a binary file for each hand you give it with the amount of losses that hand would have against each board and hand combination. Ex. cards 1 and 2 would output 2118760 4 byte integers with the corresponding amout of losses against each of the 2118760 board combinations (50 choose 5) iterating through each hand that they could go up against (45 choose 2), these files will be placed in ./ehs.
 
